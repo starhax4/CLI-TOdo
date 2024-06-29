@@ -1,0 +1,13 @@
+{
+  "name": "todo-app-23426",
+  "version": "1.0.0",
+  "description": "a simple cli based todo app",
+  "main": "index.js",
+  "type": "module",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hamza Islam",
+  "license": "ISC"
+}
