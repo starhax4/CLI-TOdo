@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 import chalk from "chalk";
 import inquirer from "inquirer";
-import { EventEmitter } from 'events';
+//its just for increasing listener limit , don't worry you can skip it bro
+import { EventEmitter } from "events";
 EventEmitter.defaultMaxListeners = 150; // Increase the limit to 150
 process.stdin.setMaxListeners(150);
 let todos = [];
@@ -115,7 +116,7 @@ async function showTodos() {
         let index = 0;
         for (let todo of todos) {
             console.log(chalk.yellow(`id: ${index + 1}`));
-            console.log(chalk.green(`Title: ${todo.title}`));
+            console.log(chalk.green.bold(`Title: ${todo.title}`));
             console.log(chalk.blue(`Description: ${todo.description}`));
             if (todo.isDone) {
                 console.log(chalk.blue(`Is done: ${chalk.green(todo.isDone)}`));
@@ -157,7 +158,7 @@ async function showTodos() {
                 let index = 0;
                 for (let todo of notDoneTodos) {
                     console.log(chalk.yellow(`id: ${index + 1}`));
-                    console.log(chalk.green(`Title: ${todo.title}`));
+                    console.log(chalk.green.bold(`Title: ${todo.title}`));
                     console.log(chalk.blue(`Description: ${todo.description}`));
                     if (todo.isDone) {
                         console.log(chalk.blue(`Is done: ${chalk.green(todo.isDone)}`));
@@ -180,7 +181,7 @@ async function showTodos() {
                 let index = 0;
                 for (let todo of doneTodos) {
                     console.log(chalk.yellow(`id: ${index + 1}`));
-                    console.log(chalk.green(`Title: ${todo.title}`));
+                    console.log(chalk.green.bold(`Title: ${todo.title}`));
                     console.log(chalk.blue(`Description: ${todo.description}`));
                     if (todo.isDone) {
                         console.log(chalk.blue(`Is done: ${chalk.green(todo.isDone)}`));
@@ -214,7 +215,7 @@ async function updateTodos() {
         let index = 0;
         for (let todo of todos) {
             console.log(chalk.yellow(`id: ${index + 1}`));
-            console.log(chalk.green(`Title: ${todo.title}`));
+            console.log(chalk.green.bold(`Title: ${todo.title}`));
             console.log("------------------------------------------------------ ");
             index++;
         }
@@ -278,7 +279,7 @@ async function deleteTodos() {
         let index = 0;
         for (let todo of todos) {
             console.log(chalk.yellow(`id: ${index + 1}`));
-            console.log(chalk.green(`Title: ${todo.title}`));
+            console.log(chalk.green.bold(`Title: ${todo.title}`));
             console.log("------------------------------------------------------ ");
             index++;
         }
@@ -312,7 +313,7 @@ async function deleteTodos() {
         goBack();
     }
     catch (error) {
-        console.error("Error: No todo selected or invalid operation.");
+        console.log("Error: No todo selected or invalid operation.");
         goBack();
     }
 }

@@ -135,7 +135,7 @@ async function showTodos() {
     let index = 0;
     for (let todo of todos) {
       console.log(chalk.yellow(`id: ${index + 1}`));
-      console.log(chalk.green(`Title: ${todo.title}`));
+      console.log(chalk.green.bold(`Title: ${todo.title}`));
       console.log(chalk.blue(`Description: ${todo.description}`));
       if (todo.isDone) {
         console.log(chalk.blue(`Is done: ${chalk.green(todo.isDone)}`));
@@ -177,7 +177,7 @@ async function showTodos() {
         let index = 0;
         for (let todo of notDoneTodos) {
           console.log(chalk.yellow(`id: ${index + 1}`));
-          console.log(chalk.green(`Title: ${todo.title}`));
+          console.log(chalk.green.bold(`Title: ${todo.title}`));
           console.log(chalk.blue(`Description: ${todo.description}`));
           if (todo.isDone) {
             console.log(chalk.blue(`Is done: ${chalk.green(todo.isDone)}`));
@@ -201,7 +201,7 @@ async function showTodos() {
         let index = 0;
         for (let todo of doneTodos) {
           console.log(chalk.yellow(`id: ${index + 1}`));
-          console.log(chalk.green(`Title: ${todo.title}`));
+          console.log(chalk.green.bold(`Title: ${todo.title}`));
           console.log(chalk.blue(`Description: ${todo.description}`));
           if (todo.isDone) {
             console.log(chalk.blue(`Is done: ${chalk.green(todo.isDone)}`));
@@ -239,7 +239,7 @@ async function updateTodos() {
     let index = 0;
     for (let todo of todos) {
       console.log(chalk.yellow(`id: ${index + 1}`));
-      console.log(chalk.green(`Title: ${todo.title}`));
+      console.log(chalk.green.bold(`Title: ${todo.title}`));
       console.log("------------------------------------------------------ ");
       index++;
     }
@@ -305,7 +305,7 @@ async function deleteTodos() {
     let index = 0;
     for (let todo of todos) {
       console.log(chalk.yellow(`id: ${index + 1}`));
-      console.log(chalk.green(`Title: ${todo.title}`));
+      console.log(chalk.green.bold(`Title: ${todo.title}`));
       console.log("------------------------------------------------------ ");
       index++;
     }
